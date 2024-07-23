@@ -1,10 +1,4 @@
-echo "streamlit
-pandas
-matplotlib
-networkx
-pyngrok" > requirements.txt
-
-echo "import streamlit as st
+import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 import networkx as nx
@@ -53,6 +47,7 @@ st.title("Publicaciones 2023 en colaboración")
 fig, ax = plt.subplots(figsize=(35, 50))  # Aumentado el tamaño del gráfico
 nx.draw_networkx_nodes(G, pos, node_size=node_size, node_color='orange', alpha=0.9, ax=ax)
 nx.draw_networkx_edges(G, pos, width=0.5, alpha=0.5, edge_color='grey', ax=ax, arrows=True)
-nx.draw_networkx_labels(G, pos, labels=labels, font_size=15, font_family=\"sans-serif\", ax=ax)  # Aumentada la fuente de las etiquetas
+nx.draw_networkx_labels(G, pos, labels=labels, font_size=15, font_family="sans-serif", ax=ax)  # Aumentada la fuente de las etiquetas
 ax.set_axis_off()
-st.pyplot(fig)" > app.py
+st.pyplot(fig)
+
